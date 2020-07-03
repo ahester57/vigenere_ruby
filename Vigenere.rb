@@ -42,9 +42,7 @@ class Vigenere
     end
 
     def brute_force_known_substr(cipher_text, plain_substr, key_length)
-        substr = VigenereUtil.text_to_array( substr )
-        p substr
-        @cipher_text.join('')
+        p plain_substr
     end
 end
 

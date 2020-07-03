@@ -9,15 +9,18 @@ class Hester_Project1
         menu
 	end
 
-    def menu
+    private def menu
         puts( "\n1:\tVigenere" )
-        puts( "2:\tUnit Test" )
+        puts( "2:\tBrute Force" )
+        puts( "3:\tUnit Test" )
         puts( "0:\tExit" )
         response = readline
         case response.chars[0]
         when "1"
             menu_vigenere
         when "2"
+            menu_brute
+        when "3"
             menu_test
         when "0"
             puts "Goodbye."
@@ -26,7 +29,7 @@ class Hester_Project1
         end
     end
 
-    def menu_vigenere
+    private def menu_vigenere
         print( "\nEnter plain text: " )
         plain_text = readline
         key = ''
@@ -46,15 +49,37 @@ class Hester_Project1
         menu
     end
 
-    def encrypt_vigenere(plain_text, key)
+    private def encrypt_vigenere(plain_text, key)
         cipher_text = Vigenere.new.encrypt( plain_text, key )
     end
 
-    def decrypt_vigenere(cipher_text, key)
+    private def decrypt_vigenere(cipher_text, key)
         decoded_cipher_text = Vigenere.new.decrypt( cipher_text, key )
     end
     
-    def menu_test
+    private def menu_brute
+        print( "\nEnter cipher text: " )
+        cipher_text = readline
+        substr = ''
+        loop do
+            print( "Enter known substring of plaintext: " )
+            substr = VigenereUtil.text_to_array( readline ).join
+            break if substr.length > 0
+        end
+        puts( brute_force_vigenere( cipher_text, substr ) )
+        menu
+    end
+
+    private def brute_force_vigenere(cipher_text, known_substr)
+        vig = Vigenere.new
+        possible_plaintext = []
+        for k_len in 1..10
+            p k_len
+            possible_plaintext.push( vig.brute_force_known_substr(cipher_text, known_substr, k_len) )
+        end
+    end
+
+    private def menu_test
         puts( "\nTest Menu" )
         puts( "1:\tTest Vigenere" )
         puts( "0:\tExit" )

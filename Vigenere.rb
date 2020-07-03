@@ -5,40 +5,44 @@ class Vigenere
 
     def encrypt(plain_text, key)
         # Encode 'plain_text' using vigenere cipher and 'key' as the key
-        run_vigenere(plain_text, key, 1)
+        run_vigenere(
+            VigenereUtil.text_to_array( plain_text ),
+            VigenereUtil.text_to_array( key ),
+            1
+        )
     end
 
     def decrypt(cipher_text, key)
         # Decode 'cipher_text' using vigenere cipher and 'key' as the key
-        run_vigenere(cipher_text, key, -1)
+        run_vigenere(
+            VigenereUtil.text_to_array( cipher_text ),
+            VigenereUtil.text_to_array( key ),
+             -1
+        )
     end
 
-    def run_vigenere(text, key, adjuster)
-        text_array = VigenereUtil.text_to_array(text)
-        split_key = VigenereUtil.text_to_array(key)
-        numeric_text = vigenere_algorithm(text_array, split_key, adjuster)
-        coded_text = numeric_text.map { |x| VigenereUtil.number_to_letter(x) }
-        # VigenereUtil.display_results(cipher_text, cipher_text_array, decoded_cipher_text)
-        coded_text.join('')
+    private def run_vigenere(text_array, key_array, adj)
+        # adj -> postive = encode, negative = decode
+        coded_text = vigenere_algorithm( text_array, key_array, (adj == 0 ? 1 : adj.abs / adj) )
+                        .map { |x| VigenereUtil.n_to_l( x ) }
+                        .join('')
+        # VigenereUtil.display_results( text_array.join(''), coded_text )
+        coded_text
     end
 
-    def vigenere_algorithm(text_array, key_array, adjuster)
+    private def vigenere_algorithm(text_array, key_array, adj)
         numeric_text_array = []
         k = 0
         for i in 0..text_array.length-1
-            k_i = VigenereUtil.letter_to_number(key_array[k])
-            x = (VigenereUtil.letter_to_number(text_array[i]) + (k_i * adjuster)) % 26
-            numeric_text_array[i] = x
-            k += 1
-            if (k >= key_array.length) then
-                k = 0
-            end
+            k_i = VigenereUtil.l_to_n( key_array[k] )
+            numeric_text_array[i] = ( VigenereUtil.l_to_n( text_array[i] ) + (k_i * adj) ) % 26
+            k = (k + 1) % key_array.length
         end
-        return numeric_text_array
+        numeric_text_array
     end
 
     def brute_force_known_substr(cipher_text, plain_substr, key_length)
-        substr = VigenereUtil.plain_text_to_array(substr)
+        substr = VigenereUtil.text_to_array( substr )
         p substr
         @cipher_text.join('')
     end
@@ -55,32 +59,30 @@ class VigenereUtil
             lookAhead =~ /[[:alpha:]]/
         end
 
-        def letter_to_number(letter)
+        def l_to_n(letter)
             # return number value for letter a = 0, b = 1, c = 2, ..., z = 25
             letter.ord - 97
         end
 
-        def number_to_letter(number)
+        def n_to_l(number)
             # return letter value for number 0 = a, 1 = b, 2 = c, ..., 25 = z, 26 = a, 27 = b, ...
             [(number % 26) + 97].pack('U')
         end
 
         def text_to_array(text)
             # in Ruby, every method returns the result of the last line of the method, kinda like Lisp
-            reject_all_but_letters(text.downcase.chars)
+            reject_all_but_letters( text.downcase.chars )
         end
 
-        def reject_all_but_letters(input)
-            input.reject { |x| !VigenereUtil.letter?(x) }
+        private def reject_all_but_letters(input)
+            input.reject { |x| !VigenereUtil.letter?( x ) }
         end
 
-        def display_results(orig, trim, post)
+        def display_results(orig, post)
             # Original:
-            puts(orig)
-            # Trimmed
-            puts(trim.join(''))
-            # Deccoded:
-            puts(post.join(''))
+            puts( "Original: " + orig )
+            # Coded:
+            puts( "Coded: " + post )
         end
     end
 end

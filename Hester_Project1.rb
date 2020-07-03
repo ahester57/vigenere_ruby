@@ -2,7 +2,6 @@
 # ruby 2.6.6p146 (2020-03-31 revision 67876) [x64-mingw32]
 
 require_relative 'Vigenere.rb'
-require 'concurrent'
 
 class Hester_Project1
 	def initialize
@@ -20,7 +19,7 @@ class Hester_Project1
         when "2"
             menu_test
         when "0"
-            "Goodbye."
+            puts "Goodbye."
         else
             menu
         end
@@ -58,7 +57,7 @@ class Hester_Project1
         case response.chars[0]
         when "1"
             tr = TestRunner.new
-            tr.await.run_vigenere
+            tr.run_vigenere
         when "0"
             menu
         else
@@ -67,8 +66,6 @@ class Hester_Project1
     end
 
     class TestRunner
-        include Concurrent::Async
-
         def run_vigenere
             require_relative 'TestVigenere.rb'
             TestVigenere.new("test_vigenere")

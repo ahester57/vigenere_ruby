@@ -3,7 +3,6 @@
 
 require_relative 'Vigenere.rb'
 
-v = Vigenere.new("Dogs ar4e Good!2");
-puts(v.encrypt("cat"))
-puts(v.decrypt_with_key("cat"))
-puts(v.decrypt_with_known_plain_text_key_length("dogs", 3))
+v = Vigenere.new("cat", "azogs ar4e Good!2");
+puts(v.encrypt())
+puts(v.decrypt("cat"))

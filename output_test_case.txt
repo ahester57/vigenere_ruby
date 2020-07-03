@@ -1,0 +1,154 @@
+$ ruby Hester_Project1.rb
+
+1:      Vigenere
+2:      Unit Test
+0:      Exit
+2
+
+Test Menu
+1:      Test Vigenere
+0:      Exit
+1
+Loaded suite Hester_Project1
+Started
+Input Range
+">afTDcZ;;Q;?[o3`3PkqLEq>[C]\\b6jB6Aa>4Ym5IT34VKeQ7<oQdOngslYi"
+"]XH49f<it1[kYg1l9?nHHkttVkTlBTjOVMc^bPpXYo2Pgb]MiIf?h_P7gR8]"
+"J4;qXS=L64q[:JBoqfID`nJ;BbM[`:8h731st;tgnE6jfB3UkO57mjCLP]5W"
+"c8CQaMqsg@iYFH^oN^8=AH>pbhb3Z[j338XQtOCQIW83E496^bH^W_Bk6nf3"
+"e?oItmqf9=mbEE7KA^81l@72Ed?b3Ns^AAoPqV8jf`=na>@qLW1o[s6Y3ps;"
+"HHsao5tZH2=:KqqE[n`ci_=Ic`SVG>pBth4tOAi4FMtU>3^:3Kek_i4oeUtr"
+";NS>OCTcEPZIKZ1kD^RSWaf4FB^sriWJaj2HoOQaD?ptRZc=n[TbEYKmsIR["
+"C]D24<pXZ3Ah=2`\\VL_D3>LVBM?t2R>Y]_[QIADkb9mlLpIaATVQgGI>R`Rd"
+"4?aHf8<IgQT@LU1JZriNOID=?6]AOniJ<3V8^L?pA2CCUin^VhQPVZgioLRe"
+"oa`GgYcFFVoiFrSER9hCnL>c]KTBSm;TWdPc>Te1I2opoP4fIAk4ZUJV4O7N"
+"KitT\\qgD`?f8UiAb5p>mYCbU_S1V^^_He_pJ>W^o^A7cBZSlKQ;NAYMrCf=8"
+"]\\]dGn5W3T\\N69NrmPXPa?[s;FZSJ_Xl]2h667SH<rPfMJ`\\^Tfh@GDX=?Pd"
+"c6Fh=\\o:nH<\\D9kGd63rLe]_]pjFA]A[5cgX_Rj@[mS<4ibOW@=Y>M[lELLE"
+"eM?7Tpr\\YtDm1:<biU?@NVe;>KJbUkfJEL[AfKZP[8FclHS>g:LPS`s@SlKX"
+"Rj?B;DWc>MA7EOmg2rbV`EMQrbl?HFETlZ\\S<LgCN<n7oVke<NZO[Uf\\C_fi"
+"9^ZNY[Q`^TPZZoZFIq_G;;6YXVshJpWQa79o@rRm?]>TGh`q27`Z4J3=p@Fs"
+":add_fSK6IM<6eSEsID5CV:FlBnF7T>J<]mYj?IOm<]lltWCJo2[>CT8`1[J"
+"8?QQQ?C91>k>kUYk[EY81S3JgFAIZoTratPD7Qsio;JE4F^pTsX=38q[X>g]"
+"hKt7ho8OC[f\\;GDrjFiIgYrW=MP[G6Qs;B:572gsggLlTHLKL42q;WhA=8Mm"
+"P^YB;5kQV;7_On5p>OYPnXEoZ:^LO8TBXjCZ6fET7ET?5ZY`5\\cbIps5MShE"
+"hCNn4XstHPG4gh5?cn6Wa`KCapZ:14RHIe=FNsBblj_Pr3W;IR@B<Jcc_l8T"
+"c7ltY=K<ZiE[oX5Ws6DJqRXnn@71WD_aZimr2[]GZHl:FYSnOGR7=27>HtN1"
+"pOn_pZSJ@cLo775q;@VHWR>\\NqS]5d6KLViJJ3i2F^Ac;6OKjhdWqJYQ[:HK"
+"@ajA:[ode7qXgRakHF[ZKM4Fhc`cjode]pDGGs5:N>p=Pi2E7KDbm5Bgq]8e"
+"7C=ZnIKY5TTCF^HEO`FLoIoj]hrSFY1gV87m<`cSWSmEFP;Xe3_kQQ;CQK_T"
+"^=;_fApJrRrMQDNAUkjpIl<@_L1;?J8XFpWLL;Nq^aHg1gIS84S7b[32FG3o"
+key:            swgwfvpna
+trimmed_input:  aftdczqopkqleqcbjbaaymitvkeqoqdongslyi
+cipher:         sbzzhufbpcmravxqwbsweinokxeikwztivflqe
+decoded_input:  aftdczqopkqleqcbjbaaymitvkeqoqdongslyi
+key:            ftsziilug
+trimmed_input:  xhfitkyglnhhkttvktlbtjovmcbppxyopgbmiifhpgr
+cipher:         caxhbsjarsazjbbgezquliwdxwhuipxwxrvsnbxgxoc
+decoded_input:  xhfitkyglnhhkttvktlbtjovmcbppxyopgbmiifhpgr
+key:            muyhpptxq
+trimmed_input:  jqxslqjboqfidnjbbmhsttgnejfbukomjclpw
+cipher:         vkvzafcyeczgkcyuyctmravcxgvnoivbyvifi
+decoded_input:  jqxslqjboqfidnjbbmhsttgnejfbukomjclpw
+key:            vcsckdiee
+trimmed_input:  ccqamqsgiyfhonahpbhbzjxqtocqiwebhwbknf
+cipher:         xeicwtakmthzqxdptfcdrlhtbsglkoglkefoih
+decoded_input:  ccqamqsgiyfhonahpbhbzjxqtocqiwebhwbknf
+key:            xocqacytt
+trimmed_input:  eoitmqfmbeekaledbnsaaopqvjfnaqlwosyps
+cipher:         bckjmsdfubsmqlgbugpocepstcykosbwqqrip
+decoded_input:  eoitmqfmbeekaledbnsaaopqvjfnaqlwosyps
+key:            xbovzwros
+trimmed_input:  hhsaotzhkqqenciicsvgpbthtoaifmtukekioeutr
+cipher:         eigvnpqvcnrsibezqkshdwsdkcsfgaotgvyalfioq
+decoded_input:  hhsaotzhkqqenciicsvgpbthtoaifmtukekioeutr
+key:            dyyecodie
+trimmed_input:  nsoctcepzikzkdrswaffbsriwjajhooqadptrzcntbeykmsir
+cipher:         qqmgvqhxdlixoffveeidzwtwzremfmssogxxuxarvphgopqgv
+decoded_input:  nsoctcepzikzkdrswaffbsriwjajhooqadptrzcntbeykmsir
+key:            xaxbitjfw
+trimmed_input:  cdpxzahvldlvbmtryqiadkbmllpiaatvqggirrd
+cipher:         zdmyhtqahalscumadmfaaljfuqlfaxudjpleora
+decoded_input:  cdpxzahvldlvbmtryqiadkbmllpiaatvqggirrd
+key:            ndommtthn
+trimmed_input:  ahfigqtlujzrinoidaonijvlpaccuinvhqpvzgiolre
+cipher:         nktusjmshwcfuzhbknbqwvheihppxwzhajwimjwaxkx
+decoded_input:  ahfigqtlujzrinoidaonijvlpaccuinvhqpvzgiolre
+key:            hoslguxmd
+trimmed_input:  oaggycffvoifrserhcnlcktbsmtwdpcteiopopfiakzujvon
+cipher:         voyrewcryvwxcyyotfuzuvzvpywdrhnzyfasvdxtgewgmccf
+decoded_input:  oaggycffvoifrserhcnlcktbsmtwdpcteiopopfiakzujvon
+key:            qtpmvmzzh
+trimmed_input:  kittqgdfuiabpmycbusvhepjwoacbzslkqnaymrcf
+cipher:         abiflscebytqbhkbabiowqkvvnhsuoegwpmhofgoa
+decoded_input:  kittqgdfuiabpmycbusvhepjwoacbzslkqnaymrcf
+key:            yorymwsfn
+trimmed_input:  dgnwtnnrmpxpasfzsjxlhshrpfmjtfhgdxpd
+cipher:         bueufjfwznlgyebrxwvzyqtnhkzhhwfszpuq
+decoded_input:  dgnwtnnrmpxpasfzsjxlhshrpfmjtfhgdxpd
+key:            absqrpnya
+trimmed_input:  cfhonhdkgdrlepjfaacgxrjmsibowymlelle
+cipher:         cgzeewqigdsdugysyachphabfgboxqcctyje
+decoded_input:  cfhonhdkgdrlepjfaacgxrjmsibowymlelle
+key:            zdeptazpc
+trimmed_input:  emtprytdmbiunvekjbukfjelafkzpfclhsglpssslkx
+cipher:         dpxekyssoalycoejydtnjyxlzumysjrehrvnovwhekw
+decoded_input:  emtprytdmbiunvekjbukfjelafkzpfclhsglpssslkx
+key:            gjrobeuoj
+trimmed_input:  rjbdwcmaeomgrbvemqrblhfetlzslgcnnovkenzoufcfi
+cipher:         xssrxggonuvxfczyazxkcvginziyuxqorijtkwqcvjwtr
+decoded_input:  rjbdwcmaeomgrbvemqrblhfetlzslgcnnovkenzoufcfi
+key:            fvrmamvpy
+trimmed_input:  znyqtpzzozfiqgyxvshjpwqaorrmtghqzjpfs
+cipher:         eipctbuomeazcgkskqmegiqmjgproxtqleedx
+decoded_input:  znyqtpzzozfiqgyxvshjpwqaorrmtghqzjpfs
+key:            bdymjqxdk
+trimmed_input:  addfskimesesidcvflbnftjmyjiomlltwcjoctj
+cipher:         bgbrbafpothqumssivcqdfscvmsppjxcmzmydwh
+decoded_input:  addfskimesesidcvflbnftjmyjiomlltwcjoctj
+key:            dhsjmwouk
+trimmed_input:  qqqckkuykeysjgfaizotratpdqsiojefptsxqxg
+cipher:         txilwgisuhfkssbocjrajjflrkclvbnrlhmhtey
+decoded_input:  qqqckkuykeysjgfaizotratpdqsiojefptsxqxg
+key:            rblsqftrt
+trimmed_input:  hkthoocfgdrjfiigyrwmpgqsbgsggllthlklqwhamm
+cipher:         ylezetvwzusuxynzpknnaygxuxlxhwdjmebehxsscr
+decoded_input:  hkthoocfgdrjfiigyrwmpgqsbgsggllthlklqwhamm
+key:            vfhloutlf
+trimmed_input:  pybkqvonpoypnxeozlotbxjczfetetzycbipsmshe
+cipher:         kdivephyujdwylyhkqjyiixwsqjojakmwutunrzss
+decoded_input:  pybkqvonpoypnxeozlotbxjczfetetzycbipsmshe
+key:            cjufjopry
+trimmed_input:  hcnnxsthpgghcnwakcapzrhiefnsbbljprwirbjcclt
+cipher:         jlhsggiynipbhwkpbacytwqwtwlukvqsdgngtkdhlzi
+decoded_input:  hcnnxsthpgghcnwakcapzrhiefnsbbljprwirbjcclt
+key:            tqtpbtwbm
+trimmed_input:  cltykzieoxwsdjqrxnnwdazimrgzhlfysnogrhtn
+cipher:         vbmnlsefaqmlskjnyzgmwpabisssxeuzljpskxmc
+decoded_input:  cltykzieoxwsdjqrxnnwdazimrgzhlfysnogrhtn
+key:            rjzmdpdji
+trimmed_input:  ponpzsjcloqvhwrnqsdklvijjifacokjhdwqjyqhk
+cipher:         gxmbchmltfzutzgqzautkhlymrnrlnwmwgfyahptn
+decoded_input:  ponpzsjcloqvhwrnqsdklvijjifacokjhdwqjyqhk
+key:            yyepyqrno
+trimmed_input:  ajaodeqxgrakhfzkmfhccjodepdggsnppiekdbmbgqe
+cipher:         yhedbuhkupyowdpbztfagymtvcreewcnfzrybzqqegv
+decoded_input:  ajaodeqxgrakhfzkmfhccjodepdggsnppiekdbmbgqe
+key:            lygbvvnzh
+trimmed_input:  cznikyttcfheofloiojhrsfygvmcswsmefpxekqqcqkt
+cipher:         nxtjftgsjqfkpagbhvufxtattutnqcthzsoepiwrxlxs
+decoded_input:  cznikyttcfheofloiojhrsfygvmcswsmefpxekqqcqkt
+key:            upbqoytmp
+trimmed_input:  fapjrrrmqdnaukjpilljxfpwllnqahggissbfgo
+cipher:         zpqzfpkyfxcbkyhiuafyyvduexckpiwugleqzvp
+decoded_input:  fapjrrrmqdnaukjpilljxfpwllnqahggissbfgo
+.
+Finished in 0.0308565 seconds.
+------------------------------------------------------------------------------------------------------------------------
+
+1 tests, 26 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0
+notifications
+100% passed
+------------------------------------------------------------------------------------------------------------------------
+
+32.41 tests/s, 842.61 assertions/s

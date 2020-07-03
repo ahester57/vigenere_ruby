@@ -5,6 +5,7 @@ require_relative 'Vigenere.rb'
 
 class Hester_Project1
 	def initialize
+        $stdout.sync = true
         menu
 	end
 
@@ -26,18 +27,22 @@ class Hester_Project1
     end
 
     def menu_vigenere
-        puts( "\nEnter plain text: " )
+        print( "\nEnter plain text: " )
         plain_text = readline
-        puts( "Enter key: " )
-        key = readline
-        puts( "Cipher Text: " + cipher_text = encrypt_vigenere( plain_text, key ) )
-        puts( "Plain Text: " + decoded_cipher_text = decrypt_vigenere( cipher_text, key ) )
-        p(
-            :plain_text => plain_text,
-            :key => key,
-            :cipher_text => cipher_text,
-            :decoded_cipher_text => decoded_cipher_text
-        )
+        key = ''
+        loop do
+            print( "Enter key: " )
+            key = VigenereUtil.text_to_array( readline ).join
+            break if key.length > 0
+        end
+        puts( "Cipher Text:\t" + cipher_text = encrypt_vigenere( plain_text, key ) )
+        puts( "Decrypt Text:\t" + decoded_cipher_text = decrypt_vigenere( cipher_text, key ) )
+        #p(
+        #    :plain_text => plain_text,
+        #    :key => key,
+        #    :cipher_text => cipher_text,
+        #    :decoded_cipher_text => decoded_cipher_text
+        #)
         menu
     end
 

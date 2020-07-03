@@ -1,0 +1,51 @@
+$ ruby Hester_Project1.rb
+
+1:      Vigenere
+2:      Unit Test
+0:      Exit
+1
+
+Enter plain text: doogs ^*&%&%$^76878934298{}\``` are good
+Enter key: abc
+Cipher Text:    dpqgtcrfiopf
+Decrypt Text:   doogsaregood
+
+1:      Vigenere
+2:      Unit Test
+0:      Exit
+1
+
+Enter plain text: dogs are good
+Enter key: cat
+Cipher Text:    fozuakgghqd
+Decrypt Text:   dogsaregood
+
+1:      Vigenere
+2:      Unit Test
+0:      Exit
+1
+
+Enter plain text: ATtack At dawn
+Enter key:
+Enter key: 9
+Enter key: -
+Enter key: 323
+Enter key: a
+Cipher Text:    attackatdawn
+Decrypt Text:   attackatdawn
+
+1:      Vigenere
+2:      Unit Test
+0:      Exit
+1
+
+Enter plain text: attack at dawn
+Enter key: qwopierjkuoijdskfhiuoajfewodsiujdfklnewadiuojd
+Cipher Text:    qphpkorcnukv
+Decrypt Text:   attackatdawn
+
+1:      Vigenere
+2:      Unit Test
+0:      Exit
+0
+Goodbye.

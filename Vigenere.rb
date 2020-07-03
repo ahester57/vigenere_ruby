@@ -2,49 +2,46 @@
 # ruby 2.6.6p146 (2020-03-31 revision 67876) [x64-mingw32]
 
 class Vigenere
-    attr_accessor(:key, :plain_text)
 
-    def initialize(key, plain_text)
-        @key = key
-        @plain_text = plain_text
-        @cipher_text = nil
+    def encrypt(plain_text, key)
+        # Encode 'plain_text' using vigenere cipher and 'key' as the key
+        run_vigenere(plain_text, key, 1)
     end
 
-    def encrypt()
-        # Encode the instance variable 'plain_text' using vigenere cipher and 'key' as the key
-        plain_text_array = VigenereUtil.text_to_array(plain_text)
+    def decrypt(cipher_text, key)
+        # Decode 'cipher_text' using vigenere cipher and 'key' as the key
+        run_vigenere(cipher_text, key, -1)
+    end
+
+    def run_vigenere(text, key, adjuster)
+        text_array = VigenereUtil.text_to_array(text)
         split_key = VigenereUtil.text_to_array(key)
-        numeric_encoded_plain_text = []
+        numeric_text = vigenere_algorithm(text_array, split_key, adjuster)
+        coded_text = numeric_text.map { |x| VigenereUtil.number_to_letter(x) }
+        # VigenereUtil.display_results(cipher_text, cipher_text_array, decoded_cipher_text)
+        coded_text.join('')
+    end
+
+    def vigenere_algorithm(text_array, key_array, adjuster)
+        numeric_text_array = []
         k = 0
-        for i in 0..plain_text_array.length-1
-            k_i = VigenereUtil.letter_to_number(split_key[k])
-            x = (VigenereUtil.letter_to_number(plain_text_array[i]) + k_i) % 26
-            numeric_encoded_plain_text[i] = x
+        for i in 0..text_array.length-1
+            k_i = VigenereUtil.letter_to_number(key_array[k])
+            x = (VigenereUtil.letter_to_number(text_array[i]) + (k_i * adjuster)) % 26
+            numeric_text_array[i] = x
             k += 1
-            if (k >= key.length) then
+            if (k >= key_array.length) then
                 k = 0
             end
         end
-        encoded_plain_text = numeric_encoded_plain_text.map { |x| VigenereUtil.number_to_letter(x) }
-        # Original:
-        p(plain_text)
-        # Trimmed
-        p(plain_text_array)
-        # Encoded:
-        p(encoded_plain_text)
-        @cipher_text = encoded_plain_text.join('')
+        return numeric_text_array
     end
 
-    def decrypt(key)
-        @cipher_text#.map { |x| VigenereUtil.number_to_letter(VigenereUtil.letter_to_number(x)) }
-    end
-
-    def brute_force_known_substr(substr, key_length)
+    def brute_force_known_substr(cipher_text, plain_substr, key_length)
         substr = VigenereUtil.plain_text_to_array(substr)
         p substr
         @cipher_text.join('')
     end
-
 end
 
 class VigenereUtil
@@ -75,6 +72,15 @@ class VigenereUtil
 
         def reject_all_but_letters(input)
             input.reject { |x| !VigenereUtil.letter?(x) }
+        end
+
+        def display_results(orig, trim, post)
+            # Original:
+            puts(orig)
+            # Trimmed
+            puts(trim.join(''))
+            # Deccoded:
+            puts(post.join(''))
         end
     end
 end

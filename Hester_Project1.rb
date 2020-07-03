@@ -3,6 +3,11 @@
 
 require_relative 'Vigenere.rb'
 
-v = Vigenere.new("cat", "azogs ar4e Good!2");
-puts(v.encrypt())
-puts(v.decrypt("cat"))
+key = "cat"
+plain_text = "azogs ar4e Good!2"
+v = Vigenere.new;
+cipher_text = v.encrypt(plain_text, key)
+decoded_cipher_text = v.decrypt(cipher_text, key)
+
+p(:plain_text => plain_text, :cipher_text => cipher_text, :decoded_cipher_text => decoded_cipher_text)
+

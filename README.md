@@ -8,5 +8,7 @@ This project involves some tasks involving historical substitution ciphers, work
 
 Built with `ruby 2.6.6p146 (2020-03-31 revision 67876) [x64-mingw32]`  
 
-Run unit tests with `ruby TestVigenere.rb` or by choosing 'Unit Test' from the in-app menu.  
+Run with `ruby lib/Hester_Project1.rb`  
+
+Run unit tests with `ruby lib/TestVigenere.rb` or by choosing 'Unit Test' from the in-app menu.  
 

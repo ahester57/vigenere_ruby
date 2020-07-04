@@ -40,10 +40,6 @@ class Vigenere
         end
         numeric_text_array
     end
-
-    def brute_force_known_substr(cipher_text, plain_substr, key_length)
-        p plain_substr
-    end
 end
 
 class VigenereUtil

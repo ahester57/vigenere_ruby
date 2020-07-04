@@ -1,0 +1,65 @@
+$ time ruby Hester_Project1.rb
+
+1:      Vigenere
+2:      Brute Force
+3:      Unit Test
+0:      Exit
+2
+
+Enter cipher text: dpgtasehopd
+Enter known substring of plaintext: dogs
+Enter max key size (max 10): 4
+26
+26
+Key length 1 done. Continue(y/n)? y
+Found: "dogsaregood" with key: "ab", continue?
+
+676
+675
+{:plaintext=>"dogsaregood", :key=>"ab"}
+Key length 2 done. Continue(y/n)? y
+17576
+17576
+{:plaintext=>"dogsaregood", :key=>"ab"}
+Key length 3 done. Continue(y/n)? y
+Found: "dogsaregood" with key: "abab", continue?
+Found: "dgvpajtdogs" with key: "ajle", continue?
+
+
+Found: "vdogsgmugdl" with key: "imsn", continue?
+Found: "vsfasvdogsc" with key: "ixbt", continue?
+
+
+Found: "rdudogsrcdr" with key: "mmmq", continue?
+
+Found: "jpdogsbcupa" with key: "uadf", continue?
+
+Found: "haqsedogsan" with key: "wpqb", continue?
+Found: "gliedogsrlf" with key: "xeyp", continue?
+
+
+456976
+456968
+{:plaintext=>"dogsaregood", :key=>"ab"}
+{:plaintext=>"dogsaregood", :key=>"abab"}
+{:plaintext=>"dgvpajtdogs", :key=>"ajle"}
+{:plaintext=>"vdogsgmugdl", :key=>"imsn"}
+{:plaintext=>"vsfasvdogsc", :key=>"ixbt"}
+{:plaintext=>"rdudogsrcdr", :key=>"mmmq"}
+{:plaintext=>"jpdogsbcupa", :key=>"uadf"}
+{:plaintext=>"haqsedogsan", :key=>"wpqb"}
+{:plaintext=>"gliedogsrlf", :key=>"xeyp"}
+Key length 4 done. Continue(y/n)?
+n
+
+
+1:      Vigenere
+2:      Brute Force
+3:      Unit Test
+0:      Exit
+0
+Goodbye.
+
+real    0m37.203s
+user    0m0.000s
+sys     0m0.015s

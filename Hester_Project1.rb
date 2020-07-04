@@ -2,6 +2,7 @@
 # ruby 2.6.6p146 (2020-03-31 revision 67876) [x64-mingw32]
 
 require_relative 'Vigenere.rb'
+require_relative 'VigenereBrute.rb'
 
 class Hester_Project1
 	def initialize
@@ -66,16 +67,38 @@ class Hester_Project1
             substr = VigenereUtil.text_to_array( readline ).join
             break if substr.length > 0
         end
-        puts( brute_force_vigenere( cipher_text, substr ) )
+        max_key_size = 0 
+        loop do
+            print( "Enter max key size (max 10): " )
+            res = readline.strip
+            begin
+                max_key_size = res.to_i
+            rescue
+                max_key_size = 0
+            end
+            break if max_key_size > 0 and max_key_size <= 10
+        end
+        puts( brute_force_vigenere( cipher_text, substr, max_key_size ) )
         menu
     end
 
-    private def brute_force_vigenere(cipher_text, known_substr)
-        vig = Vigenere.new
+    private def brute_force_vigenere(cipher_text, known_substr, max_key_size)
+        vig = VigenereBrute.new
         possible_plaintext = []
-        for k_len in 1..10
-            p k_len
-            possible_plaintext.push( vig.brute_force_known_substr(cipher_text, known_substr, k_len) )
+        continue = true
+        for k_length in 1..max_key_size do
+            possible_plaintext.push( vig.brute_force_known_substr(cipher_text, known_substr, k_length) )
+            print( "Key length #{k_length} done. Continue(y/n)? " )
+            begin
+                res = readline.strip!.downcase
+                case res
+                when "n"
+                    continue = false
+                end
+            end until ["y", "n"].include? res
+            if not continue then
+                break
+            end
         end
     end
 

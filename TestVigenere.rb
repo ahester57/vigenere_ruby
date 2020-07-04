@@ -33,12 +33,4 @@ class TestVigenere < Test::Unit::TestCase
         end
     end
 
-    private def text_to_array(text)
-        # in Ruby, every method returns the result of the last line of the method, kinda like Lisp
-        reject_all_but_letters( text.downcase.chars )
-    end
-
-    private def reject_all_but_letters(input)
-        input.reject { |x| !VigenereUtil.letter?( x ) }
-    end
 end

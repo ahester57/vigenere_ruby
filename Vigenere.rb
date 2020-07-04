@@ -42,7 +42,15 @@ class Vigenere
     end
 
     def brute_force_known_substr(cipher_text, plain_substr, key_length)
-        p plain_substr
+        key = "a" * key_length
+        for i in 0..26^key_length do
+            p i
+        end
+        puts( key )
+    end
+
+    private def key_gen(key_length, index)
+
     end
 end
 

@@ -73,10 +73,10 @@ class Hester_Project1
     private def brute_force_vigenere(cipher_text, known_substr)
         vig = Vigenere.new
         possible_plaintext = []
-        for k_len in 1..10
-            p k_len
-            possible_plaintext.push( vig.brute_force_known_substr(cipher_text, known_substr, k_len) )
+        for k_length in 1..10 do
+            possible_plaintext.push( vig.brute_force_known_substr(cipher_text, known_substr, k_length) )
         end
+        puts( possible_plaintext )
     end
 
     private def menu_test

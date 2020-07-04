@@ -1,0 +1,39 @@
+$ time ruby Hester_Project1.rb
+
+1:      Vigenere
+2:      Brute Force
+3:      Unit Test
+0:      Exit
+2
+
+Enter cipher text: irfwxjcgqjgqpzfaxyoptngpnvhints
+Enter known substring of plaintext: sekiro
+Enter max key size (max 10): 4
+26
+26
+Key length 1 done. Continue(y/n)? y
+676
+676
+Key length 2 done. Continue(y/n)? y
+17576
+17576
+Key length 3 done. Continue(y/n)? y
+Found: "darkssoulssekiroshadowsdietwice" with key: "from", continue?
+
+456976
+456975
+{:plaintext=>"darkssoulssekiroshadowsdietwice", :key=>"from"}
+Key length 4 done. Continue(y/n)?
+n
+
+
+1:      Vigenere
+2:      Brute Force
+3:      Unit Test
+0:      Exit
+0
+Goodbye.
+
+real    0m58.784s
+user    0m0.000s
+sys     0m0.015s

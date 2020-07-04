@@ -67,15 +67,26 @@ class Hester_Project1
             substr = VigenereUtil.text_to_array( readline ).join
             break if substr.length > 0
         end
-        puts( brute_force_vigenere( cipher_text, substr ) )
+        max_key_size = 0 
+        loop do
+            print( "Enter max key size (max 10): " )
+            res = readline.strip
+            begin
+                max_key_size = res.to_i
+            rescue
+                max_key_size = 0
+            end
+            break if max_key_size > 0 and max_key_size <= 10
+        end
+        puts( brute_force_vigenere( cipher_text, substr, max_key_size ) )
         menu
     end
 
-    private def brute_force_vigenere(cipher_text, known_substr)
+    private def brute_force_vigenere(cipher_text, known_substr, max_key_size)
         vig = VigenereBrute.new
         possible_plaintext = []
         continue = true
-        for k_length in 1..10 do
+        for k_length in 1..max_key_size do
             possible_plaintext.push( vig.brute_force_known_substr(cipher_text, known_substr, k_length) )
             print( "Key length #{k_length} done. Continue(y/n)? " )
             begin
@@ -89,7 +100,6 @@ class Hester_Project1
                 break
             end
         end
-        puts( possible_plaintext )
     end
 
     private def menu_test

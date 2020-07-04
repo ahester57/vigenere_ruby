@@ -2,6 +2,7 @@
 # ruby 2.6.6p146 (2020-03-31 revision 67876) [x64-mingw32]
 
 require_relative 'Vigenere.rb'
+require_relative 'VigenereBrute.rb'
 
 class Hester_Project1
 	def initialize
@@ -71,10 +72,22 @@ class Hester_Project1
     end
 
     private def brute_force_vigenere(cipher_text, known_substr)
-        vig = Vigenere.new
+        vig = VigenereBrute.new
         possible_plaintext = []
+        continue = true
         for k_length in 1..10 do
             possible_plaintext.push( vig.brute_force_known_substr(cipher_text, known_substr, k_length) )
+            print( "Key length #{k_length} done. Continue(y/n)? " )
+            begin
+                res = readline.strip!.downcase
+                case res
+                when "n"
+                    continue = false
+                end
+            end until ["y", "n"].include? res
+            if not continue then
+                break
+            end
         end
         puts( possible_plaintext )
     end

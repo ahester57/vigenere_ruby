@@ -1,0 +1,50 @@
+$ time ruby lib/Hester_Project1.rb
+
+1:      Vigenere
+2:      Brute Force
+3:      Unit Test
+0:      Exit
+2 
+
+Enter cipher text: irfwkxfixkxvyujtjvmvtngpajkkuuj 
+Enter known substring of plaintext: sekiro 
+Enter max key size (max 10): 5 
+26 
+26 
+Key length 1 done. Continue(y/n)? y 
+676 
+676
+Key length 2 done. Continue(y/n)? y 
+17576 
+17576
+Key length 3 done. Continue(y/n)? y 
+456976 
+456976 
+Key length 4 done. Continue(y/n)? y 
+Found: "darkssoulssekiroshadowsdietwice" with key: "froms", continue?  
+ 
+ 11881376 
+ 11881375 
+ {:plaintext=>"darkssoulssekiroshadowsdietwice", :key=>"froms"}
+ Key length 5 done. Continue(y/n)?  
+
+ n 
+
+
+ 1:      Vigenere
+ 2:      Brute Force
+ 3:      Unit Test
+ 0:      Exit
+ 0 
+ Goodbye. 
+
+ real    69m30.558s 
+ user    0m0.000s
+ sys     0m0.093s
+
+In this test, I noticed that my machine was bound by memory when doing the 5-letter keys. At 16 GB ram, 12 GB were used the whole time. CPU was only at about 27% the whole time.
+
+The program found the plain-text in about 20 minutes, but took another 30-40 minutes to test the remaining 5-letter keys.
+
+Another observation was that Ruby seemed to struggle garbage collecting everything. After the program said 'Goodbye.", it took another 5-10 minutes just to exit. Watching task manager, the memory usage slowly trended down until it was able to safely close.
+
